@@ -1,0 +1,109 @@
+@import "src/assets/styles/media-breakpoints.styles";
+
+.details {
+  &__button {
+    position: absolute;
+    top: 10%;
+    left: 6rem;
+    color: #fff;
+    font-size: 2.4rem;
+    z-index: 1;
+    cursor: pointer;
+
+    &:before {
+      content: "\27F5";
+      font-size: 3.5rem;
+    }
+  }
+
+  &__player {
+    position: relative;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: column;
+  }
+  &__ratingOption {
+    font-weight: 700;
+    font-size: 3.6rem;
+    &--strong {
+      font-size: 4.8rem;
+    }
+    &:first-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__imgBlock {
+    position: relative;
+    top: -9.5rem;
+  }
+
+  &__options {
+    h1 {
+      font-size: 4.8rem;
+      line-height: 1.23;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__description {
+    width: 85%;
+    margin-left: auto;
+    font-size: 2.4rem;
+    p {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__plot {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: $min-md-width) {
+  .details {
+    &__descriptionBlock {
+      display: flex;
+      margin-top: 5rem;
+    }
+    &__options {
+      margin-left: 4rem;
+    }
+    &__rating {
+      margin-top: 5rem;
+    }
+  }
+}
+@media (max-width: $max-sm-width) {
+  .details {
+    &__button {
+      top: 18%;
+      left: 4rem;
+    }
+    &__options {
+      position: relative;
+      top: -4rem;
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+      }
+    }
+    &__ratingOption {
+      font-size: 3rem;
+
+      &--strong {
+        font-size: 4rem;
+      }
+    }
+    &__description {
+      font-size: 2rem;
+      width: 90%;
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

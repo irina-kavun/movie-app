@@ -1,0 +1,11 @@
+@import "src/assets/styles/media-breakpoints.styles";
+
+.container {
+  padding: 0 2rem 0 6rem;
+}
+
+@media (max-width: $max-sm-width) {
+  .container {
+    padding: 0 2rem 0 4rem;
+  }
+}

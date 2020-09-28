@@ -1,0 +1,35 @@
+@import "src/assets/styles/media-breakpoints.styles";
+
+.search-container {
+  position: relative;
+  max-width: 54rem;
+}
+
+.search-button {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  cursor: pointer;
+  svg {
+    font-size: 3rem !important;
+    color: #c4c4c4;
+  }
+}
+
+.search-input {
+  width: 100%;
+  padding: 2.3rem;
+  font-size: 1.8rem;
+  &::placeholder {
+    color: #e5e5e5;
+  }
+}
+
+@media (max-width: $max-sm-width) {
+  .search-input {
+    padding: 1.5rem;
+  }
+  .search-button {
+    top: 1.3rem;
+  }
+}

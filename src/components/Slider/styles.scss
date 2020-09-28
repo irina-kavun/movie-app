@@ -1,0 +1,64 @@
+@import "src/assets/styles/media-breakpoints.styles";
+
+.slider-image {
+  width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  top: 75%;
+}
+
+.swiper-button-next {
+  right: 7rem;
+}
+
+.swiper-button-prev {
+  left: 10rem;
+}
+
+.swiper-button-label {
+  position: relative;
+  margin-top: 10px;
+  font-size: 2.4rem;
+}
+
+.swiper-button-next {
+  .swiper-button-label {
+    right: 2rem;
+  }
+}
+
+.swiper-button-prev {
+  .swiper-button-label {
+    left: 2rem;
+  }
+}
+
+.swiper-button-prev:after {
+  content: "";
+}
+
+.swiper-button-prev:before {
+  content: "\27F5";
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+}
+
+.swiper-button-next:after {
+  content: "\27F6";
+}
+
+@media (max-width: $max-sm-width) {
+  .swiper-button-label {
+    font-size: 2rem;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:before {
+    font-size: 2.5rem;
+  }
+}
