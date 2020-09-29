@@ -29,8 +29,6 @@ const Slider = () => {
       }}
       loop={true}
       speed={1000}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       <div className="swiper-button-next">
         <span className="swiper-button-label">Next</span>

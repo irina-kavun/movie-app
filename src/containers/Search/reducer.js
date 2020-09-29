@@ -3,6 +3,7 @@ import { TYPES } from "./types";
 const initialState = {
   filters: { page: 1 },
   liveSearchFilters: {},
+  searchDropdown: false,
 };
 
 const searchReducer = (state = initialState, { type, payload }) => {
@@ -32,6 +33,16 @@ const searchReducer = (state = initialState, { type, payload }) => {
         ...state,
         filters: { ...state.filters, page: 1 },
       };
+    case TYPES.OPEN_SEARCH_DROPDOWN:
+      return {
+        ...state,
+        searchDropdown: true,
+      }
+    case TYPES.CLOSE_SEARCH_DROPDOWN:
+      return {
+        ...state,
+        searchDropdown: false,
+      }
     default:
       return state;
   }

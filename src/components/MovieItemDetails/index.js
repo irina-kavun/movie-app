@@ -6,12 +6,14 @@ import Button from "../Button";
 
 import "./styles.scss";
 import Container from "../Grid/Container";
+import PropTypes from "prop-types";
 
 const video = "https://www.youtube.com/watch?v=DYYtuKyMtY8";
 
 const MovieItemDetails = ({
   movie: { Title, Type, Year, Poster, Plot, Runtime, Genre, imdbRating },
 }) => {
+
   const history = useHistory();
   const goBack = () => history.goBack();
   return (
@@ -62,6 +64,19 @@ const MovieItemDetails = ({
       </Container>
     </Wrapper>
   );
+};
+
+MovieItemDetails.propTypes = {
+  movie: PropTypes.shape({
+    Title: PropTypes.string.isRequired,
+    Type: PropTypes.string.isRequired,
+    Poster: PropTypes.string.isRequired,
+    Year: PropTypes.string.isRequired,
+    Plot: PropTypes.string.isRequired,
+    Runtime: PropTypes.string.isRequired,
+    Genre: PropTypes.string.isRequired,
+    imdbRating: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default MovieItemDetails;

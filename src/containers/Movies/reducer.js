@@ -24,6 +24,7 @@ const moviesReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         loading: false,
+        totalMovies: 0,
       };
     case TYPES.GET_TOTAL_MOVIES:
       return {

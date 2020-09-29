@@ -21,3 +21,11 @@ export const setNextPage = () => ({
 export const setDefaultPage = () => ({
   type: TYPES.SET_DEFAULT_PAGE,
 });
+
+export const openSearchDropdown = ()=> ({
+  type: TYPES.OPEN_SEARCH_DROPDOWN,
+})
+
+export const closeSearchDropdown = ()=> ({
+  type: TYPES.CLOSE_SEARCH_DROPDOWN,
+})

@@ -9,10 +9,22 @@
     font-size: 2.4rem;
     z-index: 1;
     cursor: pointer;
+    transition: .5s;
 
     &:before {
       content: "\27F5";
-      font-size: 3.5rem;
+      margin-right: 1rem;
+      font-family: swiper-icons;
+      font-size: var(--swiper-navigation-size);
+      text-transform: none !important;
+      letter-spacing: 0;
+      text-transform: none;
+      font-variant: initial;
+      line-height: 1;
+      transition: .4s;
+    }
+    &:hover {
+     transform: translateX(-2rem);
     }
   }
 
@@ -77,6 +89,8 @@
     }
   }
 }
+
+
 @media (max-width: $max-sm-width) {
   .details {
     &__button {
@@ -87,15 +101,15 @@
       position: relative;
       top: -4rem;
       h1 {
-        font-size: 4rem;
-        margin-bottom: 3rem;
+        font-size: 3rem;
+        margin-bottom: 2rem;
       }
     }
     &__ratingOption {
-      font-size: 3rem;
+      font-size: 2rem;
 
       &--strong {
-        font-size: 4rem;
+        font-size: 3rem;
       }
     }
     &__description {
@@ -103,6 +117,13 @@
       width: 90%;
       p {
         margin-bottom: 2rem;
+      }
+    }
+    &__imgBlock {
+      max-width: 25rem;
+      margin: 0 auto;
+      img {
+        width: 100%;
       }
     }
   }

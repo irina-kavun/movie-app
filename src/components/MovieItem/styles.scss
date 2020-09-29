@@ -1,4 +1,5 @@
 @import "src/assets/styles/colors.styles";
+@import "src/assets/styles/media-breakpoints.styles";
 
 .movieItem {
   position: relative;
@@ -56,6 +57,40 @@
       align-self: flex-end;
       font-size: 1.8rem;
       transition: all 0.5s;
+    }
+  }
+}
+
+@media (max-width: $max-md-width) {
+  .movieItem {
+    margin-bottom: 2rem;
+
+    &__link {
+      font-size: 3rem;
+    }
+    img {
+      left: -5rem;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .movieItem {
+    img {
+      left: -20rem;
+      max-height: 35rem;
+    }
+  }
+}
+
+@media (max-width: $max-sm-width) {
+  .movieItem {
+    &__link {
+      font-size: 2rem;
+    }
+    img {
+      left: 0;
+      max-height: 250px;
     }
   }
 }

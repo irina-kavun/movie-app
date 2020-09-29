@@ -1,0 +1,72 @@
+@import "src/assets/styles/colors.styles";
+@import "src/assets/styles/media-breakpoints.styles";
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+
+  &__items {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  &__buttonGroup {
+    display: flex;
+  }
+
+  &__buttonPrev {
+    margin-right: 6rem;
+
+    &:before {
+      content: "\27F5";
+      font-family: swiper-icons;
+      font-size: 4rem;
+      text-transform: none !important;
+      letter-spacing: 0;
+      font-variant: initial;
+      margin-right: 1rem;
+    }
+  }
+
+  &__buttonNext {
+    &:after {
+      content: "\27F6";
+      font-family: swiper-icons;
+      font-size: 4rem;
+      text-transform: none !important;
+      letter-spacing: 0;
+      font-variant: initial;
+      margin-left: 1rem;
+    }
+  }
+  &__buttonPrev,
+  &__buttonNext {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #fff;
+
+    &:disabled {
+      color: $mainText;
+      cursor: default;
+    }
+  }
+}
+
+@media (max-width: $max-sm-width) {
+.pagination {
+  &__buttonPrev,
+  &__buttonNext,
+  &__items {
+    font-size: 1.5rem;
+  }
+  &__buttonPrev {
+    margin-right: 1.5rem;
+  }
+  &__buttonPrev:before,
+  &__buttonNext:after, {
+    font-size: 2rem;
+  }
+}
+}

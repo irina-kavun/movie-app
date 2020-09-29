@@ -7,10 +7,24 @@
   font-weight: 700;
   z-index: 3;
 }
-.homepage-movies {
-  margin-top: 15rem;
-  max-width: 76.5rem;
-  margin-left: auto;
+
+.homepage-liveSearchWrap {
+  position: relative;
+}
+
+.homepage-liveSearch {
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+@media (min-width: $min-md-width) {
+  .homepage-movies {
+    margin-top: 15rem;
+    max-width: 70%;
+    margin-left: auto;
+  }
 }
 
 @media (max-width: $max-md-width) {
@@ -18,10 +32,17 @@
     top: -2.2rem;
     font-size: 4rem;
   }
+  .homepage-movies {
+    margin-top: 10rem;
+  }
 }
 
 @media (max-width: $max-sm-width) {
   .homepage-title {
     font-size: 3rem;
+  }
+
+  .homepage-movies {
+    margin-top: 5rem;
   }
 }
