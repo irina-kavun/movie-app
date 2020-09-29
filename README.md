@@ -1,5 +1,6 @@
 ## Project Name & Pitch
-###Movie Search
+
+### Movie Search
 The application used to search movies on user preference. It contains the main page with a slider and a searchbar. The list of items on the page displayed once they match the search. One can serf the app by clicking each movie item and gets to the detailed page of the found movie.  
 
 ## Technical Stack
